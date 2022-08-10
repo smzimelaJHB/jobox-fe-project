@@ -5,14 +5,13 @@ export function downloadPdf(){
 
 const clientName = ref();
 const condition = ref(true);
-const inputBgColor = ref('background:yellow');
+const inputBgColor = ref('background:#FFFAFA');
 
 function processPdf(elementToPrint) {
   condition.value = false;
-  inputBgColor.value = 'background:white';
   html2pdf(elementToPrint, {
     margin: 0,
-    filename: `${clientName.value}_${new Date().toLocaleDateString()}.pdf`,
+    filename: `document_${new Date().toLocaleDateString()}.pdf`,
     image: { type: "jpeg", quality: 0.98 },
     html2canvas: { dpi: 192, letterRendering: true },
     jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },

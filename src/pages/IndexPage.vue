@@ -1,6 +1,6 @@
 <template lang="pug">
 div(style="margin-left:95%, position: absolute; top: 80px;")
-  q-btn(round  dence color="green" style="background-color:blue" icon="download" @click="downloadPDF")
+  q-btn(round  dence color="green" style="background-color:blue" icon="download" @click="downloadPDF" v-show="Download")
 
 div(id="element-to-print" style="")
   .page
@@ -27,13 +27,14 @@ div(id="element-to-print" style="")
 
 
 <script setup>
+
 import { ref,watch } from "vue";
 import Page1 from './Contract/page1.vue'
 import Page2 from './Contract/page2.vue'
 import Page3 from './Contract/page3.vue'
 import {downloadPdf} from './Scripts/'
 
-
+const Download = ref(true);
 const paymentAmount = ref()
 const startDate = ref()
 const endDate = ref()
@@ -43,14 +44,13 @@ const clientName = downloadPdf().clientName;
 const elementToPrint = ref(null);
 const inputBgColor = downloadPdf().inputBgColor;
 
-
-
 function downloadPDF(){
   elementToPrint.value = document.getElementById('element-to-print');
-  inputBgColor.value = 'background:white';
   downloadPdf().processPdf(elementToPrint.value);
 }
 
-
 </script>
+
+
+
 

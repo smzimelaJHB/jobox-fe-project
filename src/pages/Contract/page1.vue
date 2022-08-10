@@ -9,7 +9,8 @@ p(style="text-align:center;") and
 
 p(style="text-align:center; font-weight: bold;")
   input(v-model='ClientName'
-  placeholder="[INSERT CLIENT NAME]" style="text-align:center; border: 0px solid #ccc; border-radius: 4px; padding: 10px; min-width: 50%;" :style="inputBgColor")
+  placeholder="[INSERT CLIENT NAME]"
+  style="text-align:center; border: 0px solid #ccc; border-radius: 4px; padding: 10px; min-width: 50%;" :style="inputBgColor")
 
 
 p(style="text-align: center;") Collectively referred herein as the parties
@@ -18,5 +19,5 @@ p(style="text-align: center;") Collectively referred herein as the parties
 <script setup>
 import PageTop from 'src/components/PageTop.vue';
 import PageBottom from 'src/components/PageBottom.vue';
-defineProps(["ClientName","inputBgColor"]);
+const props = defineProps(["ClientName","inputBgColor"]);
 </script>
