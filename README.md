@@ -46,7 +46,7 @@ that allows her to populate the following dynamic values:
 - Service description
 
 This here is the solution:
-  * You can fill and download the document as 
+  * You can fill and download the document as
 
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
@@ -72,9 +72,9 @@ To get started you need to have Quasar installed globally and NodeJS on your mac
 ### Prerequisites
 
 The following is the list of packages needed to test and run this project.
-* sh
-  ```sh
+* ```
   apt-get install nodejs
+  and
   yarn global add @quasar/cli
   or
   npm i -g @quasar/cli
@@ -84,11 +84,11 @@ The following is the list of packages needed to test and run this project.
 
 
 1. Clone the repo
-   ```sh
+   ```
    git clone https://github.com/smzimelaJHB/jobox-fe-project.git
    ```
 2. install requirements
-   ```npm
+   ```
    npm install
    ```
 
