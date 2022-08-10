@@ -1,6 +1,6 @@
 <template lang="pug">
 div(style="margin-left:95%, position: absolute; top: 80px;")
-  q-btn(round  dence color="green" style="background-color:blue" icon="download" @click="downloadPDF" v-show="Download")
+  q-btn(round  dence color="green" style="background-color:blue" icon="download" @click="checkFields")
 
 div(id="element-to-print" style="")
   .page
@@ -33,6 +33,8 @@ import Page1 from './Contract/page1.vue'
 import Page2 from './Contract/page2.vue'
 import Page3 from './Contract/page3.vue'
 import {downloadPdf} from './Scripts/'
+import { useQuasar } from "quasar";
+const $q = useQuasar();
 
 const Download = ref(true);
 const paymentAmount = ref()
@@ -43,6 +45,32 @@ const showDownloadButton = downloadPdf().condition;
 const clientName = downloadPdf().clientName;
 const elementToPrint = ref(null);
 const inputBgColor = downloadPdf().inputBgColor;
+
+
+
+function checkFields(){
+ if(false){
+      triggerNegative("Not all fields have values")
+ }else{
+      downloadPdf()
+      triggerPositive("File Downloaded")
+ }
+}
+const triggerPositive = (msg) => {
+  $q.notify({
+    type: "positive",
+    message: msg,
+    position: "top",
+  });
+};
+
+const triggerNegative = (msg) => {
+  $q.notify({
+    type: "negative",
+    message: msg,
+    position: "top",
+  });
+};
 
 function downloadPDF(){
   elementToPrint.value = document.getElementById('element-to-print');
