@@ -49,12 +49,12 @@ This here is the solution:
   * You can fill and download the document as
 
 
-[![Product Name Screen Shot][product-screenshot]]
-[![Product Name Screen Shot][product-screenshot2]]
-[![Product Name Screen Shot][product-screenshot5]]
-[![Product Name Screen Shot][product-screenshot6]]
-[![Product Name Screen Shot][product-screenshot3]]
-[![Product Name Screen Shot][product-screenshot4]]
+[Product Name Screen Shot][product-screenshot]]
+[Product Name Screen Shot][product-screenshot2]
+[Product Name Screen Shot][product-screenshot5]
+[Product Name Screen Shot][product-screenshot6]
+[Product Name Screen Shot][product-screenshot3]
+[Product Name Screen Shot][product-screenshot4]
 
 Contract Template:
 
