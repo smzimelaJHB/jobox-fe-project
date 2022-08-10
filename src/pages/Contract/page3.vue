@@ -28,19 +28,18 @@ PageTop
 </template>
 
 <style>
-.container{
+.container {
   margin-top: 10%;
   display: flex;
   flex-direction: column;
 }
-.footer{
+.footer {
   margin-top: 70%;
 }
-
 </style>
 
 <script setup>
-import PageTop from 'src/components/PageTop.vue';
-import PageBottom from 'src/components/PageBottom.vue';
-defineProps(["inputBgColor","signedAt"]);
+import PageTop from "src/components/PageTop.vue";
+import PageBottom from "src/components/PageBottom.vue";
+defineProps(["inputBgColor", "signedAt"]);
 </script>

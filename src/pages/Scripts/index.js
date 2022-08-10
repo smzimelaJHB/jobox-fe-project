@@ -3,9 +3,7 @@ import html2pdf from "html2pdf.js";
 
 export function downloadPdf(){
 
-const clientName = ref();
 const condition = ref(true);
-const inputBgColor = ref('background:#FFFAFA');
 
 function processPdf(elementToPrint) {
   condition.value = false;
@@ -22,9 +20,7 @@ function processPdf(elementToPrint) {
 }
 
 return{
-  clientName,
   condition,
-  inputBgColor,
-  processPdf
+  processPdf,
 }
 }

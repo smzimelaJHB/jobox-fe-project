@@ -8,16 +8,23 @@ p(style="text-align:center;") and
 
 
 p(style="text-align:center; font-weight: bold;")
-  input(v-model='ClientName'
+  input(v-model='clientName' :onchange="$emit('clientName', clientName)"
   placeholder="[INSERT CLIENT NAME]"
-  style="text-align:center; border: 0px solid #ccc; border-radius: 4px; padding: 10px; min-width: 50%;" :style="inputBgColor")
+  style="text-align:center; border: 0px solid #ccc; border-radius: 4px; padding: 10px; min-width: 50%;" :style="inputBgColor"
+  @click="changeColor")
 
 
 p(style="text-align: center;") Collectively referred herein as the parties
 </template>
 
 <script setup>
-import PageTop from 'src/components/PageTop.vue';
-import PageBottom from 'src/components/PageBottom.vue';
-const props = defineProps(["ClientName","inputBgColor"]);
+import { ref } from "vue";
+import PageTop from "src/components/PageTop.vue";
+
+const changeColor = () => {
+  inputBgColor.value = "background-color:white";
+};
+const inputBgColor = ref("background-color:yellow;");
+const emits = defineEmits(["clientName"]);
+const clientName = ref("");
 </script>

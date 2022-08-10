@@ -49,10 +49,12 @@ This here is the solution:
   * You can fill and download the document as
 
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-[![Product Name Screen Shot][product-screenshot2]](https://example.com)
-[![Product Name Screen Shot][product-screenshot3]](https://example.com)
-[![Product Name Screen Shot][product-screenshot4]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]]
+[![Product Name Screen Shot][product-screenshot2]]
+[![Product Name Screen Shot][product-screenshot5]]
+[![Product Name Screen Shot][product-screenshot6]]
+[![Product Name Screen Shot][product-screenshot3]]
+[![Product Name Screen Shot][product-screenshot4]]
 
 Contract Template:
 
@@ -132,3 +134,7 @@ Project Link: [https://github.com/smzimelaJHB//jobox-fe-project](https://github.
 [product-screenshot2]: images/terminal.png
 [product-screenshot3]: images/page2.png
 [product-screenshot4]: images/page3.png
+[product-screenshot5]: images/selectDate.png
+[product-screenshot6]: images/lastPage.png
+
+

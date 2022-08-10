@@ -9,7 +9,7 @@ div
     li
       p
         | BMF Attorney&rsquo;s fee R
-        input(v-model='paymentAmount' placeholder="[Payment Amount]" :style="inputBgColor" @click="changeInputBgColor")
+        input(v-model='paymentAmount' placeholder="[Payment Amount]" :style="inputBgColor" @click="changeColor" :onchange="$emit('paymentAmount', paymentAmount)")
         | (excluding VAT) . The retainer fee can
         | be paid upfront, or month-to-month and the payment terms can be payable as
         | follows:
@@ -58,7 +58,7 @@ div
         p
           | The reason for this fixed-term contract is
           span(style="font-weight: bold;")  for the appointment and completion of the
-          input(v-model='serviceDescription' :style="inputBgColor" placeholder="[Service Description]")
+          input(v-model='serviceDescription' :style="inputBgColor" placeholder="[Service Description]" @click="changeColor" :onchange="$emit('serviceDescription', serviceDescription)")
     li
       p(style="font-weight: bold;") Duration
     ol
@@ -66,9 +66,9 @@ div
         p
           | Notwithstanding the date of signature hereof, this fixed term contract shall
           | be deemed to have commenced on the
-          input(v-model='startDate' type='date' :style="inputBgColor")
+          input(v-model='startDate' type='date' :style="inputBgColor" @click="changeColor" :onchange="$emit('startDate', startDate)")
           | and will terminate, without further notice, on the
-          input(v-model='endDate' type='date' :style="inputBgColor")
+          input(v-model='endDate' type='date' :style="inputBgColor" @click="changeColor" :onchange="$emit('endDate', endDate)")
 
       li
         p
@@ -79,24 +79,35 @@ PageBottom(pageCount='3' pageNumber='2')
 </template>
 
 <style>
-  input{
-    border: 0px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    text-align: center;
-    width:150px;
-  }
-
-
+input {
+  border: 0px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  width: 150px;
+}
 </style>
 
 <script setup>
-import {ref} from 'vue';
-import PageTop from 'src/components/PageTop.vue';
-import PageBottom from 'src/components/PageBottom.vue';
+import { ref } from "vue";
+import PageTop from "src/components/PageTop.vue";
+import PageBottom from "src/components/PageBottom.vue";
 
+const serviceDescription = ref("");
+const startDate = ref("");
+const endDate = ref("");
+const paymentAmount = ref("");
 
-const props = defineProps(["paymentAmount", "startDate", "endDate","serviceDescription","inputBgColor"]);
+const inputBgColor = ref("background-color:yellow;");
 
+const changeColor = () => {
+  inputBgColor.value = "background-color:white";
+};
+
+const emits = defineEmits([
+  "serviceDescription",
+  "startDate",
+  "endDate",
+  "paymentAmount",
+]);
 </script>
-
