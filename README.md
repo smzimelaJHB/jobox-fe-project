@@ -14,6 +14,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+       <li><a href="#time-spent">Tme Spent on the project</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -35,6 +36,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Projectario;
 
+### Time Spent on the Project
+  * This is only the approximate time spent on the project. Since I did not finish it at one go, so adding up the the hours is +/- 5 hours.
+
 **Lesedi** works as a legal intern at **BMF Attorneys**. She is responsible for drawing up contracts between BMF
 Attorneys and their clients. Due to an increase in workload, Lesedi needs a faster way to draw up contracts and
 get them signed by the respective parties. She has decided to hire a skilled developer to **build a dynamic web application**
@@ -46,10 +50,10 @@ that allows her to populate the following dynamic values:
 - Service description
 
 This here is the solution:
-  * You can fill and download the document as
+  * You can fill and download the document as following:
 
 
-[![Product Name Screen Shot][product-screenshot]]]
+[![Product Name Screen Shot][product-screenshot]]
 [![Product Name Screen Shot][product-screenshot2]]
 [![Product Name Screen Shot][product-screenshot5]]
 [![Product Name Screen Shot][product-screenshot6]]
