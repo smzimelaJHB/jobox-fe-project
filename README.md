@@ -34,7 +34,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Projectario;
+## About The Project
 
 ### Time Spent on the Project
   * This is only the approximate time spent on the project. Since I did not finish it at one go, so adding up the the hours is +/- 5 hours.
